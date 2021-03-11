@@ -27,7 +27,9 @@ const handleFailure = (reject) => {
   console.log(reject);
 };
 
-checkInventory(order).then(handleSuccess, handleFailure);
+// checkInventory(order).then(handleSuccess, handleFailure);
+
+checkInventory(order).then(handleSuccess).catch(handleFailure);
 
 // Write your code below:
 const myExecutor = (resolve, reject) => {
